@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "crunchyroll-skip-intro",
+    "version": "1.0",
+    "web_accessible_resources":[
+        "script.js"
+    ],
+	"content_scripts":[
+		{
+			"matches": ["*://*.crunchyroll.com/*"],
+            "run_at": "document_end",
+			"js":["content.js"]
+		}
+	]
+}
