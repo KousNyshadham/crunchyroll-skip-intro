@@ -5,11 +5,9 @@
     "web_accessible_resources":[
         "script.js"
     ],
-	"content_scripts":[
-		{
-			"matches": ["*://*.crunchyroll.com/*"],
-            "run_at": "document_end",
-			"js":["content.js"]
-		}
-	]
+    "background":{
+        "scripts":["background.js"]
+    },
+    "browser_action": {},
+    "permissions":["activeTab"]
 }

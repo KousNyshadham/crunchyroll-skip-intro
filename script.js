@@ -19,7 +19,9 @@ function fuck(fml){
     }
     else{
             timestamp().then(bro => {
-                window.VILOS_PLAYERJS.setCurrentTime(bro/1000);
+                if(fml<bro/1000){
+                    window.VILOS_PLAYERJS.setCurrentTime(bro/1000);
+                }
             });
     }
 }
