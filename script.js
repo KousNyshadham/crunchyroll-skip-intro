@@ -1,7 +1,10 @@
 async function timestamp(){
     bruh = window.location.toString();
-    bro = await fetch("https://crunchyroll-skip-intro.herokuapp.com/offset?url=" + bruh).then(result=>result.text()).then(text=>text);
-    return bro
+    bro = await fetch(bruh).then(result =>result.text()).then(text=>text);
+    adbreaksindex = bro.indexOf("ad_breaks");
+    adbreaksplusright = bro.substring(adbreaksindex);
+    adbreaksstring = adbreaksplusright.substring(adbreaksplusright.indexOf("["), adbreaksplusright.indexOf("]")+1);
+    return parseInt(JSON.parse(adbreaksstring)[1]["offset"]);
 }
 function playerloaded(){
     if(window.VILOS_PLAYERJS == undefined){
