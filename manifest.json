@@ -14,7 +14,8 @@
             "run_at": "document_end",
 			"js":["content.js"]
 		}
-	],
+    ],
+    "permissions":["*://*.crunchyroll.com/*"],
     "web_accessible_resources":[
         "script.js"
     ]
