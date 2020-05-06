@@ -27,7 +27,7 @@ function fuck(fml){
     else{
             timestamp().then(bro => {
                 if(bro == -69){
-                    alert("this feature is not supported on the FIRST episode of some animes");
+                    alert("this feature is not supported on the first episode of some anime");
                 }
                 if(fml<bro/1000){
                     window.VILOS_PLAYERJS.setCurrentTime(bro/1000);
