@@ -5,6 +5,9 @@ async function timestamp(){
     adbreaksindex = bro.indexOf("ad_breaks");
     adbreaksplusright = bro.substring(adbreaksindex);
     adbreaksstring = adbreaksplusright.substring(adbreaksplusright.indexOf("["), adbreaksplusright.indexOf("]")+1);
+    if(adbreaksplusright.indexOf("]") - adbreaksplusright.indexOf("[") == 1){
+        return -69;
+    }
     return parseInt(JSON.parse(adbreaksstring)[1]["offset"]);
 }
 function playerloaded(){
@@ -23,6 +26,9 @@ function fuck(fml){
     }
     else{
             timestamp().then(bro => {
+                if(bro == -69){
+                    alert("this feature is not supported on the first episode of some animes");
+                }
                 if(fml<bro/1000){
                     window.VILOS_PLAYERJS.setCurrentTime(bro/1000);
                 }
