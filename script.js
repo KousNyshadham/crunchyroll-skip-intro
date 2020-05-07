@@ -1,7 +1,7 @@
 var menu;
 async function timestamp(){
     bruh = window.location.toString();
-    bro = await fetch(bruh).then(result =>result.text()).then(text=>text);
+    bro = await fetch(bruh, {credentials: 'omit'}).then(result =>result.text()).then(text=>text);
     adbreaksindex = bro.indexOf("ad_breaks");
     adbreaksplusright = bro.substring(adbreaksindex);
     adbreaksstring = adbreaksplusright.substring(adbreaksplusright.indexOf("["), adbreaksplusright.indexOf("]")+1);
